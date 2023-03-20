@@ -27,11 +27,15 @@ struct ContentView: View {
             VStack {
                 ZStack {
                     Rectangle()
-                        .fill(.secondary)
+                        //.cornerRadius(12)
+                        .fill(.white)
+                        //.border(.gray)
+                        
+                        
 
                     Text("Tap to select a picture")
-                        .foregroundColor(.white)
-                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .font(.title2)
 
                     image?
                         .resizable()
@@ -41,6 +45,7 @@ struct ContentView: View {
                     showingImagePicker = true
                 }
 
+                //Intensity
                 HStack {
                     Text("Intensity")
                     Slider(value: $filterIntensity)
@@ -59,19 +64,20 @@ struct ContentView: View {
                 }
             }
             .padding([.horizontal, .bottom])
-            .navigationTitle("Instafilter")
+            .navigationTitle("Photo Effect")
             .onChange(of: inputImage) { _ in loadImage() }
             .sheet(isPresented: $showingImagePicker) {
                 ImagePicker(image: $inputImage)
             }
             .confirmationDialog("Select a filter", isPresented: $showingFilterSheet) {
-                Button("Crystallize") { setFilter(CIFilter.crystallize()) }
-                Button("Edges") { setFilter(CIFilter.edges()) }
-                Button("Gaussian Blur") { setFilter(CIFilter.gaussianBlur()) }
-                Button("Pixellate") { setFilter(CIFilter.pixellate()) }
-                Button("Sepia Tone") { setFilter(CIFilter.sepiaTone()) }
-                Button("Unsharp Mask") { setFilter(CIFilter.unsharpMask()) }
-                Button("Vignette") { setFilter(CIFilter.vignette()) }
+                Button("Comic") { setFilter(CIFilter.comicEffect()) }
+                Button("Dot") { setFilter(CIFilter.dotScreen()) }
+                Button("Bloom") { setFilter(CIFilter.bloom()) }
+                Button("Gloom") { setFilter(CIFilter.gloom()) }
+                Button("Kaleidoscope") { setFilter(CIFilter.kaleidoscope()) }
+                Button("Pointillize") { setFilter(CIFilter.pointillize()) }
+                Button("depth Map") { setFilter(CIFilter.depthOfField()) }
+                Button("HatchedScreen") { setFilter(CIFilter.hatchedScreen()) }
                 Button("Cancel", role: .cancel) { }
             }
         }
