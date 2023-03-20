@@ -11,6 +11,8 @@
 		3DB238FC29C8A8ED0025317C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB238FB29C8A8ED0025317C /* ContentView.swift */; };
 		3DB238FE29C8A8EE0025317C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB238FD29C8A8EE0025317C /* Assets.xcassets */; };
 		3DB2390129C8A8EE0025317C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB2390029C8A8EE0025317C /* Preview Assets.xcassets */; };
+		3DB2390829C8B1800025317C /* IMG_saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2390729C8B1800025317C /* IMG_saver.swift */; };
+		3DB2390A29C8B1900025317C /* IMG_picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB2390929C8B1900025317C /* IMG_picker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		3DB238FB29C8A8ED0025317C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3DB238FD29C8A8EE0025317C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DB2390029C8A8EE0025317C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3DB2390729C8B1800025317C /* IMG_saver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMG_saver.swift; sourceTree = "<group>"; };
+		3DB2390929C8B1900025317C /* IMG_picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMG_picker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				3DB238F929C8A8ED0025317C /* Week07_LevApp.swift */,
 				3DB238FB29C8A8ED0025317C /* ContentView.swift */,
+				3DB2390729C8B1800025317C /* IMG_saver.swift */,
+				3DB2390929C8B1900025317C /* IMG_picker.swift */,
 				3DB238FD29C8A8EE0025317C /* Assets.xcassets */,
 				3DB238FF29C8A8EE0025317C /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DB2390829C8B1800025317C /* IMG_saver.swift in Sources */,
+				3DB2390A29C8B1900025317C /* IMG_picker.swift in Sources */,
 				3DB238FC29C8A8ED0025317C /* ContentView.swift in Sources */,
 				3DB238FA29C8A8ED0025317C /* Week07_LevApp.swift in Sources */,
 			);
