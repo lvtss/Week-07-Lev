@@ -25,14 +25,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
                 ZStack {
                     Rectangle()
                         //.cornerRadius(12)
                         .fill(.white)
                         //.border(.gray)
                         
-                        
-
                     Text("Tap to select a picture")
                         .foregroundColor(.blue)
                         .font(.title2)
@@ -70,14 +69,15 @@ struct ContentView: View {
                 ImagePicker(image: $inputImage)
             }
             .confirmationDialog("Select a filter", isPresented: $showingFilterSheet) {
-                Button("Comic") { setFilter(CIFilter.comicEffect()) }
-                Button("Dot") { setFilter(CIFilter.dotScreen()) }
                 Button("Bloom") { setFilter(CIFilter.bloom()) }
                 Button("Gloom") { setFilter(CIFilter.gloom()) }
-                Button("Kaleidoscope") { setFilter(CIFilter.kaleidoscope()) }
                 Button("Pointillize") { setFilter(CIFilter.pointillize()) }
-                Button("depth Map") { setFilter(CIFilter.depthOfField()) }
-                Button("HatchedScreen") { setFilter(CIFilter.hatchedScreen()) }
+                Button("Height Field") { setFilter(CIFilter.heightFieldFromMask()) }
+                Button("Depth Map") { setFilter(CIFilter.depthOfField()) }
+                Button("(Fixed) Comic") { setFilter(CIFilter.comicEffect()) }
+                Button("(Fixed) Dot") { setFilter(CIFilter.dotScreen()) }
+                Button("(Fixed) Kaleidoscope") { setFilter(CIFilter.kaleidoscope()) }
+                Button("(Fixed) Hatched") { setFilter(CIFilter.hatchedScreen()) }
                 Button("Cancel", role: .cancel) { }
             }
         }
@@ -135,23 +135,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-//import SwiftUI
-//
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
-//            Text("Hello, world!")
-//        }
-//        .padding()
-//    }
-//}
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
